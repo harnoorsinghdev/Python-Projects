@@ -25,6 +25,29 @@ def high():
             high=k
         return high    
         
+def showbyyear(yr):
+    for k in dictOFMARKS.keys():
+        if((dictOFMARKS[k])[2]==yr):
+            print(dictOFMARKS[k])
+            
+def highestbyyear(yr):
+    myList=[]
+    for k in dictOFMARKS.keys():
+        if((dictOFMARKS[k])[2]==yr):
+            myList.append(k)
+    lenn=len(myList)
+    print(myList)
+    
+    high=0
+    for i in range(0,lenn):
+        if(myList[i]>high):
+            high=myList[i]
+    print("Highest marks in year{0} are {1}".format(yr,high))    
+        
+        
+    
+    
+        
 out=sum()
 print("sum is",out)
 
@@ -33,3 +56,8 @@ print("average is",avgg)
         
 highest=high()
 print("highest is",highest)
+
+showbyyear('2019')
+highestbyyear('2018')
+
+
